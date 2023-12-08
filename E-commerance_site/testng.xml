@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="bestbuy_utlility.Bestbuy_Listener"></listener>
+	</listeners>
+	<parameter name="url" value="https://www.bestbuy.com/"></parameter>
+  <test thread-count="1" name="Test">
+	  <parameter name="browser" value="chrome"></parameter>
+    <classes>
+       <class name="testCases.Tc_008_valid_checkout_page"></class>
+		  <class name="testCases.Tc_009_invalidloginpage_password"></class>
+		  <class name="testCases.Tc_010_alladdcart_carddetails_pages"></class>
+		  <class name="testCases.Tc_011_invalid_addcart_page"></class>
+		  <class name="testCases.Tc_012_invalid_cardpayements_pages"></class>
+		   <class name="testCases.Tc_006_valid_bottomlinkpage"></class>
+    </classes>
+  </test> <!-- Test -->
+  <test name="test2">
+	  <parameter name="browser" value="edge"></parameter>
+	  <classes>
+		  <class name="testCases.Tc_001_Valid_signuppage"/>
+      <class name="testCases.Tc_002_validloginpage"></class>
+      <class name="testCases.Tc_003_invalid_signuppage"></class>
+      <class name="testCases.Tc_004_invalidloginpage_emailid"></class>
+      <class name="testCases.Tc_005_valid_allmenu_titlepage"></class>
+
+	  </classes>
+  </test>
+  <test name="test3">
+	  <parameter name="browser" value="firefox"></parameter>
+	  <classes>
+		   
+		   <class name="testCases.Tc_006_valid_bottomlinkpage"></class>
+		 
+		  <class name="testCases.Tc_007_Valid_brokenlinks"></class>
+	  </classes>
+  </test>
+</suite> <!-- Suite -->
